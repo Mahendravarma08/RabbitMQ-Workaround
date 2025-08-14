@@ -26,7 +26,7 @@ export class RBQNotificationConsumer implements OnModuleInit, OnModuleDestroy {
       await this.channel.consume(Queues.Notifications, (msg) => {
         if (msg !== null) {
           const content = msg.content.toString();
-          console.log(`Received message in notification consumer file itself: ${content}`);
+          console.log(`Received message in notification consumer file itself.: ${content}`);
           for(let i=0;i<100000000;i++){
             continue
           }
